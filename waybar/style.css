@@ -1,0 +1,84 @@
+/* --- CONFIGURACIÓN MODULAR --- */
+/* Importamos el archivo que el script sobreescribirá */
+@import "theme.css"; 
+
+* {
+    font-family: 'JetBrainsMono Nerd Font Propo', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* --- MÓDULOS REUTILIZANDO VARIABLES --- */
+
+#workspaces {
+    border-radius: 6px;
+    background: @bgdark;
+    color: @light;
+    font-weight: normal;
+}
+
+#workspaces button {
+    border-radius: 5px;
+    background: @bgdark;
+    color: @light;
+    transition: all 0.1s ease-in-out;
+}
+
+#workspaces button.active {
+    background: @light;
+    color: @bgdark;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+#workspaces button:hover {
+    background: @light;
+    color: @bgdark;
+}
+
+/* Estilo unificado para módulos de la derecha */
+#clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: @bgdark;
+    color: @light;
+    margin: 0 3px; /* Espaciado entre bloques */
+}
+
+/* Efectos Hover unificados */
+#clock:hover, #bluetooth:hover, #network:hover, #pulseaudio:hover, #custom-logo:hover, #custom-notification:hover {
+    background-color: @light;
+    color: @bgdark;
+}
+
+/* Estados de Alerta (Network/Audio desconectado o muteado) */
+#network.disconnected, #pulseaudio.muted {
+    background-color: @alert;
+    color: @alerttxt;
+    border: 2px solid @light;
+}
+
+/* Tray y otros */
+#tray {
+    margin-right: 5px;
+}
+
+#custom-logo {
+    margin-left: 3px;
+}

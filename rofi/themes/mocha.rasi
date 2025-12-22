@@ -1,0 +1,12 @@
+* {
+    on-surface: #cdd6f4;          /* text */
+    on-primary: #1e1e2e;          /* base */
+    outline: #cba6f7;             /* mauve */
+    outline-variant: #585b70;     /* surface2 */
+    primary: #89b4fa;             /* blue */
+    on-primary-container: #89b4fa;
+    surface-container-high: #313244;
+    error: #f38ba8;
+    error-container: #eba0ac;
+    on-error-container: #11111b;
+}

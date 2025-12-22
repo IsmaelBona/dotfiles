@@ -1,0 +1,12 @@
+* {
+    on-surface: #d3c6aa;          /* fg */
+    on-primary: #2d353b;          /* bg_dim */
+    outline: #a7c080;             /* green */
+    outline-variant: #475258;     /* bg_visual */
+    primary: #7fbbb3;             /* blue */
+    on-primary-container: #a7c080;
+    surface-container-high: #3d484d;
+    error: #e67e80;
+    error-container: #e67e80;
+    on-error-container: #2d353b;
+}
