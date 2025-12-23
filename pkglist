@@ -1,0 +1,24 @@
+# Sistema y Base
+base-devel
+git
+networkmanager
+bluez
+bluez-utils
+
+# Terminal y Editores
+kitty
+neovim
+zsh
+tmux
+starship
+
+# Utilidades
+fastfetch
+htop
+ripgrep
+fzf
+unzip
+
+# Interfaz y Navegador (AUR)
+brave-bin
+visual-studio-code-bin
