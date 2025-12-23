@@ -3,10 +3,11 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
-    "width": 1906, // Waybar width
     "margin-top": 11,
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 2,
+
     "modules-left": [
         "custom/logo",
         "clock",
@@ -29,7 +30,7 @@
     },
 
     "custom/logo": {
-        "format": "  ",
+        "format": " ",
         "tooltip": false,
         "on-click": "$HOME/walls.sh"
     },
@@ -95,10 +96,8 @@
 
     "clock": {
         "tooltip-format": "{calendar}",
-        /*"format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}"*/
         "format-alt": "{:%a, %d %b %Y}",
-        "format": "{:%I:%M %p}"
+        "format": "{:%H:%M}"
 
     },
 
@@ -112,7 +111,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "",
+        "format-wifi": " ",
         "format-alt": "{essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -186,7 +185,7 @@
     },
 
     "mpris": {
-        "max-length": 50,
+        "max-length": 20,
 	    "format": "{player_icon} {dynamic}",
 	    "format-paused": "{status_icon} <i>{dynamic}</i>",
 	    "player-icons": {

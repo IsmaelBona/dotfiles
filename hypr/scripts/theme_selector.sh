@@ -61,6 +61,18 @@ if [ -f "$ALACRITTY_SRC/$chosen_theme.toml" ]; then
 fi
 
 # =============================================================================
+# LÓGICA DE WALLPAPER POR DEFECTO
+# =============================================================================
+
+# Extraer la ruta del wallpaper del archivo .conf
+# Busca la línea: $wallpaper = ~/ruta/al/fondo.png
+wall_path=$(grep "\$wallpaper =" "$THEME_FILE" | cut -d'=' -f2 | sed "s/ //g" | sed "s|~|$HOME|")
+
+if [ -f "$wall_path" ]; then
+    awww img "$wall_path"
+fi
+
+# =============================================================================
 # RECARGA DE COMPONENTES
 # =============================================================================
 
