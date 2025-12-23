@@ -2,8 +2,8 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
-    "margin-top": 11,
+    "height": 25, // Waybar height (to be removed for auto height)
+    "margin-top": 7,
     "margin-left": 0,
     "margin-right": 0,
     "spacing": 2,
@@ -32,7 +32,7 @@
     "custom/logo": {
         "format": " ",
         "tooltip": false,
-        "on-click": "$HOME/walls.sh"
+        "on-click": "$HOME/.config/hypr/scripts/main_menu.sh"
     },
 
     "hyprland/workspaces": {

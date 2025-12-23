@@ -36,6 +36,9 @@ if [ -z "$chosen_theme" ]; then
     exit 0
 fi
 
+# Definir el archivo del tema
+THEME_FILE="$HYPR_SRC/$chosen_theme.conf"
+
 # =============================================================================
 # APLICACIÓN DE CAMBIOS (SYMLINKS)
 # =============================================================================
@@ -66,10 +69,13 @@ fi
 
 # Extraer la ruta del wallpaper del archivo .conf
 # Busca la línea: $wallpaper = ~/ruta/al/fondo.png
-wall_path=$(grep "\$wallpaper =" "$THEME_FILE" | cut -d'=' -f2 | sed "s/ //g" | sed "s|~|$HOME|")
+wall_path=$(grep "\$wallpaper =" "$THEME_FILE" | cut -d'=' -f2 | xargs | sed "s|^~|$HOME|")
 
-if [ -f "$wall_path" ]; then
+if [ -n "$wall_path" ] && [ -f "$wall_path" ]; then
+    echo "Aplicando wallpaper con awww..."
     awww img "$wall_path"
+else
+    echo "ERROR: No se pudo encontrar la imagen en '$wall_path'"
 fi
 
 # =============================================================================
