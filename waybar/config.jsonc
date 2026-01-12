@@ -1,19 +1,19 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 25, // Waybar height (to be removed for auto height)
+    "layer": "top", 
+    "position": "top", 
+    "height": 40, 
     "margin-top": 7,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-left": 5,
+    "margin-right": 5,
     "spacing": 2,
 
     "modules-left": [
         "custom/logo",
-        "clock",
         "mpris"
     ],
     "modules-center": [
+	"clock",
         "hyprland/workspaces"
     ],
     "modules-right": [
@@ -185,7 +185,7 @@
     },
 
     "mpris": {
-        "max-length": 20,
+        "max-length": 40,
 	    "format": "{player_icon} {dynamic}",
 	    "format-paused": "{status_icon} <i>{dynamic}</i>",
 	    "player-icons": {

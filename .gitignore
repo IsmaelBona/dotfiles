@@ -3,3 +3,9 @@ hypr/themes/current_theme.conf
 waybar/colors.css
 rofi/colors.rasi
 alacritty/current_theme.toml
+
+# Wallpaper
+*.jpg
+*.png
+*.jpeg
+*.gif
