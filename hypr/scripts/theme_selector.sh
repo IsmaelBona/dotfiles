@@ -21,6 +21,10 @@ ROFI_LINK="$HOME/.config/rofi/colors.rasi"
 ALACRITTY_SRC="$HOME/.config/alacritty/themes"
 ALACRITTY_LINK="$HOME/.config/alacritty/current_theme.toml"
 
+# --- Ghostty ---
+GHOSTTY_SRC="$HOME/.config/ghostty/themes"
+GHOSTTY_LINK="$HOME/.config/ghostty/current_theme.conf"
+
 # =============================================================================
 # LÓGICA DE SELECCIÓN
 # =============================================================================
@@ -61,6 +65,12 @@ fi
 # 4. Aplicar a Alacritty
 if [ -f "$ALACRITTY_SRC/$chosen_theme.toml" ]; then
     ln -sf "$ALACRITTY_SRC/$chosen_theme.toml" "$ALACRITTY_LINK"
+fi
+
+
+# 5. Aplicar a Ghostty
+if [ -f "$GHOSTTY_SRC/$chosen_theme.conf" ]; then
+    ln -sf "$GHOSTTY_SRC/$chosen_theme.conf" "$GHOSTTY_LINK"
 fi
 
 # =============================================================================
