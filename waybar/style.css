@@ -55,7 +55,7 @@ button {
 }
 
 /* Estilo unificado para módulos de la derecha */
-#clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
+#battery, #clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
     padding: 0 15px;
     border-radius: 5px;
     background-color: @bgdark;
