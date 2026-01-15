@@ -1,43 +1,51 @@
 #!/bin/bash
 
-# Colores para la salida
+# --- Colores ---
 GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+BLUE='\033[0;34m'
+NC='\033[0m'
 
-echo -e "${GREEN}Iniciando instalación de Dotfiles...${NC}"
+echo -e "${BLUE}Iniciando instalación de Dotfiles...${NC}\n"
 
-# 1. Actualizar sistema
-sudo pacman -Syu --noconfirm
-
-# 2. Instalar yay (si no está instalado)
-if ! command -v yay &>/dev/null; then
-  echo "Instalando yay (AUR helper)..."
-  git clone https://aur.archlinux.org/yay.git
-  cd yay
-  makepkg -si --noconfirm
-  cd ..
-  rm -rf yay
+# 1. Instalar yay si no existe
+if ! command -v yay &> /dev/null; then
+    echo -e "${GREEN}Instalando yay (AUR helper)...${NC}"
+    sudo pacman -S --needed base-devel git
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf yay
+else
+    echo -e "${BLUE}Yay ya está instalado. Saltando...${NC}"
 fi
 
-# 3. Instalar paquetes desde el .txt
-echo -e "${GREEN}Instalando paquetes desde pkglist.txt...${NC}"
-# Filtramos comentarios y instalamos
-grep -v '^#' pkglist | xargs yay -S --needed --noconfirm
+# 2. Instalar paquetes de repositorios oficiales y AUR
+echo -e "${GREEN}Instalando programas con yay...${NC}"
+# He movido zen-browser aquí ya que está en AUR
+yay -S --needed \
+    hyprland waybar swaybg rofi-wayland \
+    alacritty ghostty yazi qbittorrent btop htop \
+    vim neovim mpv calibre ghostwriter brave-bin \
+    zen-browser-bin stow flatpak
 
-# 4. Crear enlaces simbólicos (Symlinks)
-echo -e "${GREEN}Creando enlaces simbólicos...${NC}"
+# 3. Configurar Flatpak e instalar apps
+echo -e "${GREEN}Instalando aplicaciones Flatpak...${NC}"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Usamos el comando ln -sfnv que buscabas
-# Ajusta 'dotfiles_folder' al nombre de tu carpeta en el repo
-DOTFILES_DIR=$(pwd)
+flatpak install -y flathub \
+    md.obsidian.Obsidian \
+    com.obsproject.Studio \
+    org.prismlauncher.PrismLauncher \
+    io.dbeaver.DBeaverCommunity \
+    org.kde.krita \
+    com.spotify.Client \
+    io.freetubeapp.FreeTube \
+    com.discordapp.Discord
 
-# Ejemplo para Neovim
-ln -sfnv "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+# 4. Gestión de Dotfiles con GNU Stow
+echo -e "${GREEN}Aplicando configuraciones (Stow)...${NC}"
+# Esto asume que el script se ejecuta desde la carpeta ~/dotfiles
+stow .
 
-# Ejemplo para Kitty
-ln -sfnv "$DOTFILES_DIR/kitty" "$HOME/.config/kitty"
-
-# Ejemplo para Zsh (fuera de .config)
-ln -sfnv "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
-
-echo -e "${GREEN}¡Todo listo! Reinicia la terminal.${NC}"
+echo -e "${BLUE}\n¡Todo listo! Ya puedes iniciar Hyprland.${NC}"
