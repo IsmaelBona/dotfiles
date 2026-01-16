@@ -22,7 +22,11 @@ fi
 
 # 2. Instalar paquetes de repositorios oficiales y AUR
 echo -e "${GREEN}Instalando programas con yay...${NC}"
-# He movido zen-browser aquí ya que está en AUR
+
+# 3. Instalación masiva desde pkglist
+echo -e "${GREEN}Instalando paquetes desde $PKGS_FILE...${NC}"
+yay -S --needed --noconfirm - < "$PKGS_FILE"
+
 yay -S --needed \
     hyprland waybar swaybg rofi-wayland \
     alacritty ghostty yazi qbittorrent btop htop \
