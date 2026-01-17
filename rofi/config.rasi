@@ -65,7 +65,7 @@ inputbar {
 
 entry {
     placeholder: "Search..."; 
-    placeholder-color: @outline-variant; 
+    placeholder-color: @on-surface; 
     text-color: @on-surface; 
 }
 
@@ -81,24 +81,35 @@ listview {
 element {
     padding: 12px;
     spacing: 12px; 
-    border-radius: 12px; /* BOTONES SELECCIONABLES REDONDEADOS */
+    border-radius: 120px;
     cursor: pointer; 
-    background-color: transparent; 
+}
+
+element normal.normal {
+    text-color: @on-surface;
+    background-color: @surface-container-high;
+}
+
+element alternate.normal {
+    text-color: @on-surface;
+    background-color: @surface-container-high;
 }
 
 /* SELECCIÓN MÁS ESTÉTICA (TIPO BOTÓN MODERNO) */
 element selected.normal {
-    background-color: @primary;
+    background-color: @on-surface;
     text-color: @on-primary;
     border: 0px;
 }
 
 element-icon {
+    background-color: transparent;
     size: 32px;
     cursor: inherit; 
 }
 
 element-text {
+    background-color: transparent;
     cursor: inherit; 
     vertical-align: 0.5; 
     text-color: inherit; 

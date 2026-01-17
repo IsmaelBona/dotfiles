@@ -3,7 +3,7 @@
     on-primary: #2d353b;          /* bg_dim */
     outline: #a7c080;             /* green */
     outline-variant: #475258;     /* bg_visual */
-    primary: #7fbbb3;             /* blue */
+    primary: #a7c080;             /* blue */
     on-primary-container: #a7c080;
     surface-container-high: #3d484d;
     error: #e67e80;
