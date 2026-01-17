@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Opciones del menú principal
-op_theme=" Change Theme"
+op_theme="  Change Theme"
 op_wallpaper="󰸉  Change Wallpaper"
 
 # Mostrar el menú principal

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Opciones del menú principal
-op_appearance=" Appearance"
-op_reboot="󰜉 Reboot"
-op_poweroff=" Power Off"
+op_appearance="  Appearance"
+op_reboot="󰜉  Reboot"
+op_poweroff="  Power Off"
 
 # Mostrar el menú principal
 options="$op_appearance\n$op_reboot\n$op_poweroff"

@@ -28,7 +28,7 @@ configuration {
 }
 
 
-@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/current_theme.rasi"
 
 * {
     font: "Cascadia Nerd Font 13";

@@ -1,0 +1,20 @@
+/* Importamos el archivo de colores (créalo en la misma carpeta) */
+@import "current_theme.css";
+
+.notification-row {
+    outline: none;
+}
+
+.notification-content {
+    background: @bgdark;
+    color: @light;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid @blue; /* Usando variable */
+    margin: 10px;
+}
+
+.summary {
+    font-size: 16px;
+    font-weight: bold;
+}

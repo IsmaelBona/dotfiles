@@ -9,13 +9,13 @@ HYPR_SRC="$HOME/.config/hypr/themes/colors"
 HYPR_LINK="$HOME/.config/hypr/themes/current_theme.conf"
 
 # --- Waybar ---
-WAYBAR_SRC="$HOME/.config/waybar/colors"
-WAYBAR_LINK="$HOME/.config/waybar/theme.css"
+WAYBAR_SRC="$HOME/.config/waybar/themes"
+WAYBAR_LINK="$HOME/.config/waybar/current_theme.css"
 
 # --- Rofi ---
 # Tu config.rasi ya importa colors.rasi 
 ROFI_SRC="$HOME/.config/rofi/themes"
-ROFI_LINK="$HOME/.config/rofi/colors.rasi"
+ROFI_LINK="$HOME/.config/rofi/current_theme.rasi"
 
 # --- Alacritty ---
 ALACRITTY_SRC="$HOME/.config/alacritty/themes"
@@ -24,6 +24,10 @@ ALACRITTY_LINK="$HOME/.config/alacritty/current_theme.toml"
 # --- Ghostty ---
 GHOSTTY_SRC="$HOME/.config/ghostty/themes"
 GHOSTTY_LINK="$HOME/.config/ghostty/current_theme.conf"
+
+# --- SwayNC ---
+SWAYNC_SRC="$HOME/.config/swaync/themes"
+SWAYNC_LINK="$HOME/.config/swaync/current_theme.css"
 
 # =============================================================================
 # LÓGICA DE SELECCIÓN
@@ -73,6 +77,12 @@ if [ -f "$GHOSTTY_SRC/$chosen_theme.conf" ]; then
     ln -sf "$GHOSTTY_SRC/$chosen_theme.conf" "$GHOSTTY_LINK"
 fi
 
+# 6. Aplicar a SwayNC
+if [ -f "$SWAYNC_SRC/$chosen_theme.css" ]; then
+    ln -sf "$SWAYNC_SRC/$chosen_theme.css" "$SWAYNC_LINK"
+fi
+
+swaync-client -rs
 # =============================================================================
 # LÓGICA DE WALLPAPER POR DEFECTO
 # =============================================================================
