@@ -2,11 +2,12 @@
 
 # Opciones del menú principal
 op_appearance="  Appearance"
+op_vpn="󰖭 VPN"
 op_reboot="󰜉  Reboot"
 op_poweroff="  Power Off"
 
 # Mostrar el menú principal
-options="$op_appearance\n$op_reboot\n$op_poweroff"
+options="$op_appearance\n$op_vpn\n$op_reboot\n$op_poweroff"
 
 chosen=$(echo -e "$options" | rofi -dmenu -i -p "Sistema:")
 
@@ -14,6 +15,9 @@ case $chosen in
     $op_appearance)
         bash ~/.config/hypr/scripts/appearance.sh
         ;;
+    $op_vpn)
+	bash ~/.config/hypr/scripts/vpn_selector.sh
+	;;
     $op_reboot)
         systemctl reboot
         ;;

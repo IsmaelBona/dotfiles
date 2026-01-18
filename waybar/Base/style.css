@@ -54,7 +54,7 @@ button {
 }
 
 /* Estilo unificado para módulos de la derecha */
-#battery, #clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
+#custom-vpn, #battery, #clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
     padding: 0 15px;
     border-radius: 5px;
     background-color: @bgdark;
@@ -63,7 +63,7 @@ button {
 }
 
 /* Efectos Hover unificados */
-#clock:hover, #bluetooth:hover, #network:hover, #pulseaudio:hover, #custom-logo:hover, #custom-notification:hover {
+#custom-vpn:hover, #battery:hover, #clock:hover, #bluetooth:hover, #network:hover, #pulseaudio:hover, #custom-logo:hover, #custom-notification:hover {
     background-color: @light;
     color: @bgdark;
 }
@@ -90,4 +90,17 @@ button {
 
 #custom-logo {
     margin-left: 3px;
+}
+
+#custom-vpn {
+}
+
+#custom-vpn.connected {
+    animation: pulse 3s infinite; /* Un pequeño efecto de pulso */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(109, 74, 255, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(109, 74, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(109, 74, 255, 0); }
 }

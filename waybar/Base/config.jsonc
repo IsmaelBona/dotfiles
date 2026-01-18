@@ -20,6 +20,7 @@
         "tray",
         "pulseaudio",
         "bluetooth",
+	"custom/vpn",
         "network",
 	"battery",
         "custom/notification"
@@ -194,5 +195,16 @@
 		"paused": "⏸"
 	}
 	// "ignored-players": ["firefox"]
-}
+    },
+
+    "custom/vpn": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 5,
+    "exec": "$HOME/.config/waybar/scripts/detect_vpn.sh",
+    "on-click": "protonvpn disconnect",
+    "on-click-right": "alacritty -e protonvpn connect", 
+    "tooltip": true,
+    "max-length": 10
+   }
 }
