@@ -1,7 +1,6 @@
 /* --- CONFIGURACIÓN MODULAR --- */
 /* Importamos el archivo que el script sobreescribirá */
-@import "current_theme.css"; 
-
+@import url("../current_theme.css");
 * {
     font-family: 'JetBrainsMono Nerd Font Propo', sans-serif;
     font-size: 10px;

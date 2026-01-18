@@ -3,9 +3,9 @@
 # Opciones del menú principal
 op_theme="  Change Theme"
 op_wallpaper="󰸉  Change Wallpaper"
-
+op_waybar="   Change Waybar"
 # Mostrar el menú principal
-options="$op_theme\n$op_wallpaper"
+options="$op_theme\n$op_wallpaper\n$op_waybar"
 
 chosen=$(echo -e "$options" | rofi -dmenu -i -p "Sistema:")
 
@@ -17,4 +17,7 @@ case $chosen in
     $op_wallpaper)
         bash ~/.config/hypr/scripts/wallpaper_selector.sh
     	;;
+    $op_waybar)
+	bash ~/.config/hypr/scripts/waybar_selector.sh
+	;;
 esac

@@ -30,7 +30,7 @@ yay -S --needed --noconfirm - < "$PKGS_FILE"
 yay -S --needed \
     hyprland waybar swaybg rofi-wayland \
     alacritty ghostty yazi qbittorrent btop htop \
-    vim neovim mpv calibre ghostwriter brave-bin \
+    vim neovim mpv mpv-mpris calibre ghostwriter brave-bin \
     zen-browser-bin stow flatpak
 
 # 3. Configurar Flatpak e instalar apps
