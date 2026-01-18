@@ -9,6 +9,7 @@ PAISES=(
     "󰅙  Disconnect;DISCONNECT"
     "🇪🇸  España;ES"
     "🇨🇭  Suiza;CH"
+    "🇨🇦  Canadá;CA"
     "🇺🇸  EE.UU.;US"
     "🇫🇷  Francia;FR"
     "🇵🇹  Portugal;PT"
