@@ -117,7 +117,7 @@
         "format-alt": "{essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "VPN",
         "format-disconnected": "Disconnected ⚠",
         // "format-alt": "{ifnae}: {ipaddr}/{cidr}",
         "on-click-middle": "vicinae vicinae://extensions/dagimg-dot/wifi-commander/scan-wifi"

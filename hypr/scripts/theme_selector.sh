@@ -93,7 +93,7 @@ wall_path=$(grep "\$wallpaper =" "$THEME_FILE" | cut -d'=' -f2 | xargs | sed "s|
 
 if [ -n "$wall_path" ] && [ -f "$wall_path" ]; then
     echo "Aplicando wallpaper con awww..."
-    awww img "$wall_path"
+    awww img "$wall_path" --transition-type center --transition-duration 1 --transition-fps 60
 else
     echo "ERROR: No se pudo encontrar la imagen en '$wall_path'"
 fi
