@@ -1,0 +1,27 @@
+@import "~/.config/rofi/config.rasi"
+
+window {
+    width: 900px;           /* Un poco más ancho para el 3x3 */
+}
+
+listview {
+    columns: 3;
+    lines: 3;               /* Esto define el alto visual (3 filas) */
+    fixed-height: false;    /* Permite scroll si hay más de 9 imágenes */
+    spacing: 20px;
+    scrollbar: true;        /* Opcional: para ver la barra de scroll */
+}
+
+element {
+    orientation: vertical;  /* Imagen arriba, texto abajo */
+    padding: 15px;
+}
+
+element-icon {
+    size: 200px;            /* Tamaño de la preview */
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}
