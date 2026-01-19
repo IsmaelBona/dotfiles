@@ -1,19 +1,19 @@
 #!/bin/zsh
 
 # Configuración de Rofi
-ROFI_STYLE="-dmenu -p '󰖂 Seleccionar País VPN' -i"
+ROFI_STYLE="-dmenu -p '󰖂 Seleccionar País VPN' -i -show-icons -theme ~/.config/rofi/basic_menu.rasi"
 
 # Definimos los países y sus códigos (Formato: "Icono Nombre;Código")
 # Puedes añadir más siguiendo este formato
 PAISES=(
-    "󰅙  Disconnect;DISCONNECT"
-    "🇪🇸  España;ES"
-    "🇨🇭  Suiza;CH"
-    "🇨🇦  Canadá;CA"
-    "🇺🇸  EE.UU.;US"
-    "🇫🇷  Francia;FR"
-    "🇵🇹  Portugal;PT"
-    "🇯🇵  Japón;JP"
+    "󰅙⠀Disconnect;DISCONNECT"
+    "󰡶⠀España;ES"
+    "⠀Suiza;CH"
+    "⠀Canadá;CA"
+    "󰚅⠀EE.UU.;US"
+    "󰼾⠀Francia;FR"
+    "󰠳⠀Portugal;PT"
+    "⠀Japón;JP"
 )
 
 # 1. Creamos la lista para Rofi

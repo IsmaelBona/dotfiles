@@ -1,0 +1,33 @@
+/* Importamos tu configuración base */
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+    display-drun: "   Apps";
+    display-run: "   Run";
+    display-filebrowser: "   Files";
+}
+
+window {
+    width: 320px;
+}
+
+listview {
+    scrollbar: false;
+}
+
+element {
+    padding: 15px;
+    /* Forzamos a que el texto sea el único hijo o el principal para centrarlo */
+    children: [ element-text ]; 
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 14";
+    horizontal-align: 0.5; /* Centrado real (0.0 izquierda, 0.5 centro, 1.0 derecha) */
+    vertical-align: 0.5;
+    text-color: inherit;
+}
+
+/* Si quieres mantener el icono pero que no desplace el texto, 
+   podemos ocultarlo o ponerlo dentro, pero para un centrado perfecto 
+   lo mejor es dejar solo el texto como arriba. */

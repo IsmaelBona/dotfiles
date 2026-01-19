@@ -12,7 +12,7 @@ if [ ! -z "$VPN_LINE" ]; then
     # Si falla por algo, buscar cualquier par de mayúsculas (fallback)
     [ -z "$COUNTRY" ] && COUNTRY=$(echo "$FULL_NAME" | grep -oE '[A-Z]{2}' | tail -n 1)
 
-    ICON="󰖂"
+    ICON="VPN:"
     echo "{\"text\": \"$ICON $COUNTRY\", \"tooltip\": \"Conexión: $FULL_NAME\", \"class\": \"connected\"}"
 else
     echo "{\"text\": \"\", \"class\": \"disconnected\"}"

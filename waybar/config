@@ -47,10 +47,11 @@
 
     // Modules Right
     "modules-right": [
+        "custom/vpn",
+        "network",
         "custom/screenrecord",
         "custom/updates",
         "pulseaudio",
-        "network",
         "bluetooth",
         "cpu",
         "battery",

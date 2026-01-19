@@ -7,7 +7,7 @@ op_waybar="   Change Waybar"
 # Mostrar el menú principal
 options="$op_theme\n$op_wallpaper\n$op_waybar"
 
-chosen=$(echo -e "$options" | rofi -dmenu -i -p "Sistema:")
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "Appearance:" -show-icons -theme ~/.config/rofi/basic_menu.rasi)
 
 case $chosen in
     $op_theme)
@@ -18,6 +18,6 @@ case $chosen in
         bash ~/.config/hypr/scripts/wallpaper_selector.sh
     	;;
     $op_waybar)
-	bash ~/.config/hypr/scripts/waybar_selector.sh
-	;;
+        bash ~/.config/hypr/scripts/waybar_selector.sh
+        ;;
 esac

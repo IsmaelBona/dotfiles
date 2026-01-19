@@ -77,7 +77,7 @@
     "clock": {
         "tooltip-format": "{calendar}",
         "format-alt": "{:%a, %d %b %Y}",
-        "format": "{:%H:%M}"
+        "format": "{:%H:%M   |  %a, %d %b %Y}"
 
     },
 
@@ -86,7 +86,7 @@
         "format-alt": "{essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "VPN",
+        "format-linked": "",
         "format-disconnected": "Disconnected ⚠",
         "on-click-middle": "vicinae vicinae://extensions/dagimg-dot/wifi-commander/scan-wifi"
     },

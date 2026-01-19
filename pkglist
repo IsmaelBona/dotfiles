@@ -7,6 +7,7 @@ bluez-utils
 
 # Terminal y Editores
 kitty
+alacritty
 neovim
 zsh
 tmux
@@ -20,5 +21,5 @@ fzf
 unzip
 
 # Interfaz y Navegador (AUR)
-brave-bin
+zen-browser
 visual-studio-code-bin

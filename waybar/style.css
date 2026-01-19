@@ -87,8 +87,7 @@ tooltip {
 #custom-exit:hover,
 #bluetooth:hover,
 #cpu:hover,
-#pulseaudio:hover,
-#mpris {
+#pulseaudio:hover {
     transition: all 0.3s ease;
     color: @foreground;
 }
@@ -96,6 +95,7 @@ tooltip {
 #custom-hypridle,
 #custom-brightness,
 #custom-filemanager,
+#custom-vpn,
 #bluetooth,
 #battery,
 #network,
@@ -136,6 +136,12 @@ tooltip {
 }
 
 #mpris {
+    border-radius: 10px;
+    padding: 6px;
+    background-color: shade(@background, 0.8);
+}
+
+#custom-vpn {
     border-radius: 10px;
     padding: 6px;
     background-color: shade(@background, 0.7);
