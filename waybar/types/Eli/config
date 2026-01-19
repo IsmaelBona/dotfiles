@@ -41,7 +41,8 @@
 
     // Modules Center
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "mpris",
     ],
 
     // Modules Right
