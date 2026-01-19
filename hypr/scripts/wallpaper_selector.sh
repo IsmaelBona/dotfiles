@@ -23,6 +23,5 @@ if [ -n "$chosen_name" ]; then
 
     if [ -n "$chosen_wall" ]; then
         awww img "$chosen_wall" --transition-type center --transition-duration 1
-        notify-send "Sistema" "Fondo actualizado: $chosen_name"
     fi
 fi

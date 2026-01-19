@@ -1,6 +1,6 @@
 /* --- CONFIGURACIÓN MODULAR --- */
 /* Importamos el archivo que el script sobreescribirá */
-@import url("../current_theme.css");
+@import "current_theme.css";
 * {
     font-family: 'JetBrainsMono Nerd Font Propo', sans-serif;
     font-size: 10px;
@@ -28,51 +28,51 @@ button {
 
 #workspaces {
     border-radius: 6px;
-    background: @bgdark;
-    color: @light;
+    background: @background;
+    color: @foreground;
     font-weight: normal;
 }
 
 #workspaces button {
     border-radius: 5px;
-    background: @bgdark;
-    color: @light;
+    background: @background;
+    color: @foreground;
     transition: all 0.1s ease-in-out;
 }
 
 #workspaces button.active {
-    background: @light;
-    color: @bgdark;
+    background: @foreground;
+    color: @background;
     border-radius: 5px;
     min-width: 30px;
     font-size: 20px; 
 }
 
 #workspaces button:hover {
-    background: @light;
-    color: @bgdark;
+    background: @foreground;
+    color: @background;
 }
 
 /* Estilo unificado para módulos de la derecha */
 #custom-vpn, #battery, #clock, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
     padding: 0 15px;
     border-radius: 5px;
-    background-color: @bgdark;
-    color: @light;
+    background-color: @background;
+    color: @foreground;
     margin: 0 3px; /* Espaciado entre bloques */
 }
 
 /* Efectos Hover unificados */
 #custom-vpn:hover, #battery:hover, #clock:hover, #bluetooth:hover, #network:hover, #pulseaudio:hover, #custom-logo:hover, #custom-notification:hover {
-    background-color: @light;
-    color: @bgdark;
+    background-color: @foreground;
+    color: @background;
 }
 
 /* Estados de Alerta (Network/Audio desconectado o muteado) */
 #network.disconnected, #pulseaudio.muted {
     background-color: @alert;
     color: @alerttxt;
-    border: 2px solid @light;
+    border: 2px solid @foreground;
 }
 
 /* Cambios especificos modulos */

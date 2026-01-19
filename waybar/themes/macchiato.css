@@ -1,5 +1,5 @@
-@define-color bgdark #24273a;
-@define-color light #cad3f5;
+@define-color background #24273a;
+@define-color foreground #cad3f5;
 @define-color alert #ed8796;
 @define-color alerttxt #24273a;
 @define-color accent #c6a0f6;
