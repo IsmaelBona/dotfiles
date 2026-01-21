@@ -1,3 +1,4 @@
+@import "current_theme.css";
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Noto Sans", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -6,7 +7,9 @@
 }
 
 window#waybar {
-    background-color: rgba(34, 36, 54, 0.4);
+    background-color: shade(@background, 1.2);
+    margin: 0px 20px;
+    border-radius: 15px;
     color: #c0caf5;
     font-family: 
         SpaceMono Nerd Font,
@@ -18,7 +21,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 10px 15px;
+    margin: 15px 15px;
     padding: 4px 10px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.08);
@@ -40,7 +43,6 @@ window#waybar {
 }
 
 #clock,
-#battery,
 #backlight,
 #network,
 #pulseaudio,
@@ -106,4 +108,12 @@ window#waybar {
     color: inherit;
     box-shadow: none;
     text-decoration: none;
+}
+
+#custom-vpn, #battery, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
+    padding: 0 15px;
+    border-radius: 15px;
+    background-color: @background;
+    color: @foreground;
+    margin: 0 3px; /* Espaciado entre bloques */
 }

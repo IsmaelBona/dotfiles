@@ -50,11 +50,10 @@
         "custom/vpn",
         "network",
         "custom/screenrecord",
-        "custom/updates",
         "pulseaudio",
         "bluetooth",
         "cpu",
         "battery",
-        "custom/hypridle",
+        "custom/notification",
     ]
 }

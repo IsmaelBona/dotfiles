@@ -96,6 +96,7 @@ tooltip {
 #custom-brightness,
 #custom-filemanager,
 #custom-vpn,
+#custom-notification,
 #bluetooth,
 #battery,
 #network,
@@ -144,5 +145,10 @@ tooltip {
 #custom-vpn {
     border-radius: 10px;
     padding: 6px;
+    background-color: shade(@background, 0.7);
+}
+
+#custom-notification {
+    border-radius: 10px;
     background-color: shade(@background, 0.7);
 }

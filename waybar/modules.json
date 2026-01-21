@@ -15,6 +15,9 @@
             "urgent": "",
             "active": "",
             "default": ""
+        },
+       "persistent-workspaces": {
+            "*": [ 1,2,3 ]
         }
     },
 
@@ -148,17 +151,16 @@
     },
 
     "mpris": {
-        "max-length": 40,
+      "max-length": 40,
 	    "format": "{player_icon} {dynamic}",
 	    "format-paused": "{status_icon} <i>{dynamic}</i>",
 	    "player-icons": {
 		    "default": "▶"
 	    },
-	"status-icons": {
-		"paused": "⏸"
-	}
+	   "status-icons": {
+	  	  "paused": "⏸"
+	    }
     },
-
     "custom/vpn": {
     "format": "{}",
     "return-type": "json",

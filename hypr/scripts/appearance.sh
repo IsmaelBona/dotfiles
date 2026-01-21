@@ -3,7 +3,7 @@
 # Opciones del menú principal
 op_theme="  Change Theme"
 op_wallpaper="󰸉  Change Wallpaper"
-op_waybar="   Change Waybar"
+op_waybar="󱔓  Change Waybar"
 # Mostrar el menú principal
 options="$op_theme\n$op_wallpaper\n$op_waybar"
 

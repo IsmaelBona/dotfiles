@@ -21,7 +21,7 @@ fi
 # Menú de Rofi con botones
 options="󰚰  Update Now\n󰑐  Refresh\n󰅙  Exit"
 
-chosen=$(echo -e "$options" | rofi -dmenu -p "$msg" -i -config ~/.config/rofi/config.rasi)
+chosen=$(echo -e "$options" | rofi -dmenu -p "$msg" -i -show-icons -theme ~/.config/rofi/basic_menu.rasi)
 
 case "$chosen" in
     "󰚰  Update Now")

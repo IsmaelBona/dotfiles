@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Opciones del menú principal
-op_update="⟲ Update"
+op_update="  Update"
 op_appearance="  Appearance"
 op_vpn="󰦝  VPN"
 op_capture="  Capture"
@@ -23,7 +23,7 @@ case $chosen in
         bash ~/.config/hypr/scripts/vpn_selector.sh
         ;;
     $op_capture)
-        bash ~/.config/hypr/scripts/vpn_selector.sh
+        bash ~/.config/hypr/scripts/capture.sh
         ;;
     $op_system)
         bash ~/.config/hypr/scripts/system.sh

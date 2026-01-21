@@ -1,60 +1,30 @@
+// -*- mode: jsonc -*-
 {
-    // General Settings
-    "reload_style_on_change": true,
-    "layer": "top",
-    "position": "top",
-    "include": [
-        "~/.config/waybar/modules.json"
-    ],
-
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-            "empty": ""
-        },
-        "persistent-workspaces": {
-            "*": [ 1,2,3,4,5 ]
-        }
-    },
-    "custom/expand": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "group/expand": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 200,
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
-        "modules": ["custom/expand", "custom/filemanager"],
-    },
-
-    // Modules Left
+    "layer": "top", // Waybar at top layer
+    "margin-top": 10,
+    "margin-bottom": 10,
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 22, // Waybar height (to be removed for auto height)
+    "width": 1200, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
     "modules-left": [
-        "clock",
-        "group/expand",
+        "clock"
     ],
-
-    // Modules Center
     "modules-center": [
-        "hyprland/workspaces",
-        "mpris",
+      "hyprland/workspaces",
+      "mpris",
     ],
-
-    // Modules Right
     "modules-right": [
         "custom/vpn",
         "network",
-        "custom/screenrecord",
-        "custom/updates",
         "pulseaudio",
-        "bluetooth",
-        "cpu",
         "battery",
-        "custom/hypridle",
-    ]
+        "custom/notification"
+    ],
+    //Modules configuration
+
+    "include": [
+		"~/.config/waybar/modules.json"
+	]
 }
