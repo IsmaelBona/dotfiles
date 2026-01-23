@@ -1,3 +1,3 @@
 #!/bin/bash
 
-hyprshot -m region
+hyprshot -m region clipboard-only

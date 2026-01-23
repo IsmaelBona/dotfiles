@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "margin-top": 10,
-    "margin-bottom": 10,
+    "margin-top": 5,
+    "margin-bottom": 5, 
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 22, // Waybar height (to be removed for auto height)
     "width": 1200, // Waybar width
@@ -19,6 +19,8 @@
         "custom/vpn",
         "network",
         "pulseaudio",
+        "memory",
+        "power-profiles-daemon",
         "battery",
         "custom/notification"
     ],

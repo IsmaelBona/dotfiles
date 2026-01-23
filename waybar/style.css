@@ -110,7 +110,7 @@ window#waybar {
     text-decoration: none;
 }
 
-#custom-vpn, #battery, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
+#power-profiles-daemon, #memory, #custom-vpn, #battery, #bluetooth, #network, #pulseaudio, #tray, #mpris, #custom-logo, #custom-notification {
     padding: 0 15px;
     border-radius: 15px;
     background-color: @background;
