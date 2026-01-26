@@ -22,3 +22,8 @@ shell-integration-features = no-cursor
 keybind = f11=toggle_fullscreen
 keybind = shift+enter=text:\x1b\r
 confirm-close-surface = false
+keybind = ctrl+d=new_tab
+keybind = ctrl+m=new_split:right
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+

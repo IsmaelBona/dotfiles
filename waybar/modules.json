@@ -150,7 +150,7 @@
       "format-icons": {
         "default": "",
         "performance": "",
-        "balanced": "",
+        "balanced": " ",
         "power-saver": ""
       }
     },
