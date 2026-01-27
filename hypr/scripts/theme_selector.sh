@@ -37,7 +37,7 @@ SWAYNC_LINK="$HOME/.config/swaync/current_theme.css"
 themes=$(ls "$HYPR_SRC" | grep '.conf$' | sed 's/\.conf//')
 
 # Mostrar el menú de Rofi
-chosen_theme=$(echo -e "$themes" | rofi -dmenu -i -p "󰈊 Seleccionar Tema:")
+chosen_theme=$(echo -e "$themes" | rofi -dmenu -i -p "󰈊 Seleccionar Tema:" -theme ~/.config/rofi/basic_menu.rasi)
 
 # Salir si no se selecciona nada
 if [ -z "$chosen_theme" ]; then

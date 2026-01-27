@@ -7,7 +7,7 @@ op_poweroff="  Power Off"
 # Mostrar el menú principal
 options="$op_reboot\n$op_poweroff"
 
-chosen=$(echo -e "$options" | rofi -dmenu -i -p "Sistema:")
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "Sistema: " -theme ~/.config/rofi/basic_menu.rasi)
 
 case $chosen in
     $op_reboot)

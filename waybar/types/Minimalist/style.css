@@ -45,7 +45,7 @@ window#waybar {
 
 #workspaces {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 #workspaces button {
@@ -96,6 +96,16 @@ window#waybar {
     text-decoration: none;
 }
 
+#mpris {
+    padding: 0 15px;
+    border-radius: 15px; 
+    background-color: @background;
+    color: @foreground;
+    margin: 3px 10px 3px 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+
+}
+
 #clock,
 #backlight,
 #network,
@@ -108,7 +118,6 @@ window#waybar {
 #power-profiles-daemon,
 #mpd,
 #battery,
-#mpris,
 #memory,
 #bluetooth,
 #custom-vpn,

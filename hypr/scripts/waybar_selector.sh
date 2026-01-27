@@ -12,7 +12,7 @@ fi
 
 # 2. Usar Rofi para seleccionar el tema
 # Listamos solo los nombres de los directorios
-SELECTED_THEME=$(ls -d "$THEMES_DIR"/*/ | xargs -n 1 basename | rofi -dmenu -p "Selecciona un tema de Waybar:")
+SELECTED_THEME=$(ls -d "$THEMES_DIR"/*/ | xargs -n 1 basename | rofi -dmenu -p "Selecciona un tema de Waybar:" -theme ~/.config/rofi/basic_menu.rasi)
 
 # Si el usuario cancela (Esc), salimos
 if [ -z "$SELECTED_THEME" ]; then
